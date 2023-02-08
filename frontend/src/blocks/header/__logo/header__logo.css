@@ -1,0 +1,9 @@
+.header__logo {
+  margin: 27px 30px 32px;
+}
+
+@media (min-width: 768px) {
+  .header__logo {
+    margin: 0;
+  }
+}

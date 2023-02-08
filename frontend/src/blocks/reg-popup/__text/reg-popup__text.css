@@ -1,0 +1,15 @@
+.reg-popup__text {
+  font-family: "Inter", "Verdana", sans-serif;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #000;
+  margin: 0;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .reg-popup__text {
+    font-size: 24px;
+  }
+}

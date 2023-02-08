@@ -1,0 +1,10 @@
+.header__burger-btn {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .header__burger-btn {
+    display: inline;
+    margin-right: 30px;
+  }
+}

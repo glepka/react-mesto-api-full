@@ -1,0 +1,32 @@
+.burger-menu__cross {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.burger-menu__cross::before {
+  content: "";
+  width: 24px;
+  height: 3px;
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s linear;
+}
+
+.burger-menu__cross::after {
+  content: "";
+  width: 24px;
+  height: 3px;
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s linear;
+}

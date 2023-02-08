@@ -1,0 +1,41 @@
+.burger-menu {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s linear;
+}
+
+.burger-menu::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 3px;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.3s linear;
+}
+
+.burger-menu::after {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 3px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: all 0.3s linear;
+}
+
+.burger-menu:hover {
+  opacity: 0.6;
+}

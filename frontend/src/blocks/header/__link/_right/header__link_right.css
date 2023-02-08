@@ -1,0 +1,9 @@
+.header__link_right {
+  margin-right: 30px;
+}
+
+@media (min-width: 768px) {
+  .header__link_right {
+    margin-right: 0;
+  }
+}

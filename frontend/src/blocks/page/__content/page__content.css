@@ -1,0 +1,4 @@
+.page__content {
+  display: grid;
+  flex-grow: 1;
+}

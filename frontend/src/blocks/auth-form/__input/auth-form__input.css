@@ -1,0 +1,20 @@
+.auth-form__input {
+  border: none;
+  border-bottom: 2px solid #ccc;
+  background-color: transparent;
+  outline: none;
+  font-family: 'Inter', 'Verdana', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #fff;
+  padding-bottom: 7px;
+}
+
+.auth-form__input::placeholder {
+  color: #ccc;
+}
+
+.auth-form__input:focus {
+  border-bottom: 2px solid dodgerblue;
+}

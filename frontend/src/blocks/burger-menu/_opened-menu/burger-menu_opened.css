@@ -1,0 +1,17 @@
+.burger-menu_opened::before {
+  left: 100%;
+  opacity: 0;
+}
+
+.burger-menu_opened::after {
+  left: -100%;
+  opacity: 0;
+}
+
+.burger-menu_opened .burger-menu__cross::before {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.burger-menu_opened .burger-menu__cross::after {
+  transform: translateY(-50%) rotate(-45deg);
+}

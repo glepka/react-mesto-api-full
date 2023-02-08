@@ -1,0 +1,16 @@
+.auth-form__inputs-box {
+  width: 100%;
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  margin-bottom: 173px;
+}
+
+@media (min-width: 768px) {
+  .auth-form__inputs-box {
+    margin-bottom: 216px;
+  }
+}

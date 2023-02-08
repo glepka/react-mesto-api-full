@@ -1,0 +1,10 @@
+.header__user-info-box_opened{
+  max-height: 300px;
+  padding: 40px 0;
+}
+
+@media (min-width: 768px) {
+  .header__user-info-box_opened{
+    padding: 0;
+  }
+}

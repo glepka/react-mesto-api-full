@@ -1,0 +1,12 @@
+.auth-form__login-link-box {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  column-gap: 5px;
+}
+
+@media (min-width: 768px) {
+  .auth-form__login-link-box {
+    padding: 15px 0;
+  }
+}

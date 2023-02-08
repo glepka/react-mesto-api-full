@@ -1,0 +1,23 @@
+.header__link {
+  font-family: "Inter", "Verdana", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #fff;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.header__link:hover {
+  opacity: 0.6;
+}
+
+@media (min-width: 768px) {
+  .header__link {
+    font-size: 18px;
+  }
+}

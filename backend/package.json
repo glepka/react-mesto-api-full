@@ -1,0 +1,31 @@
+{
+  "name": "express-mesto-gha",
+  "version": "1.0.0",
+  "scripts": {
+    "lint": "npx eslint .",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "author": "Gleb Lyashenkov",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.23.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-import": "^2.26.0",
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.0",
+    "celebrate": "^15.0.1",
+    "express": "^4.18.1",
+    "express-winston": "^4.2.0",
+    "joi": "^17.7.0",
+    "joi-objectid": "^4.0.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^6.6.1",
+    "validator": "^13.7.0",
+    "winston": "^3.8.2"
+  }
+}

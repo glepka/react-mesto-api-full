@@ -1,0 +1,12 @@
+.reg-popup {
+  display: grid;
+  place-items: center;
+  row-gap: 40px;
+  padding: 25px 18px;
+}
+
+@media (min-width: 768px) {
+  .reg-popup {
+    padding: 24px 0;
+  }
+}
