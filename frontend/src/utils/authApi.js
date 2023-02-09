@@ -1,4 +1,4 @@
-export const BASE_URL = "https://auth.nomoreparties.co";
+export const BASE_URL = "https://api.front-mesto.glepka.nomoredomainsclub.ru/";
 
 export const statusCheck = (res) => {
   if (res.ok) {
