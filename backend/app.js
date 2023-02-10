@@ -16,7 +16,7 @@ const { PORT = 3000 } = process.env;
 const app = express();
 const allowedCors = [
   'https://front-mesto.glepka.nomoredomainsclub.ru',
-  'http://https://front-mesto.glepka.nomoredomainsclub.ru',
+  'http://front-mesto.glepka.nomoredomainsclub.ru',
   'http://localhost:3001',
   'http://localhost:3000',
 ];
