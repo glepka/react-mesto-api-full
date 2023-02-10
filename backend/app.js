@@ -54,17 +54,16 @@ app.post('/signup', validateRegistration, createUser);
 app.use(auth);
 app.use('/users', usersRouter);
 app.use('/cards', cardsRouter);
-app.use(errorLogger);
 app.use('*', (req, res, next) => {
   next(new NotFound('Страница не существует.'));
 });
-
+app.use(errorLogger);
 app.use(errors());
 
 app.use((err, req, res, next) => {
-  const { statusCode = 500, message = 'Что-то пошло не так' } = err;
+  const statusCode = err.statusCode || 500;
+  const message = statusCode === 500 ? 'На сервере произошла ошибка' : err.message;
   res.status(statusCode).send({ message });
-
   next();
 });
 
