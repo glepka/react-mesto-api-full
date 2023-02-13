@@ -1,23 +1,22 @@
 import { apiConfig } from "./constants";
 
 class Api {
-  constructor({ token, cohort, serverUrl, appJson }) {
+  constructor({ token, serverUrl, appJson }) {
     this._token = token;
-    this._cohort = cohort;
     this._serverUrl = serverUrl;
     this._appJson = appJson;
   }
 
   _getCardsUrl() {
-    return `${this._serverUrl}${this._cohort}/cards`;
+    return `${this._serverUrl}/cards`;
   }
 
   _getUserInfoUrl() {
-    return `${this._serverUrl}${this._cohort}/users/me`;
+    return `${this._serverUrl}/users/me`;
   }
 
   _getAvatarUrl() {
-    return `${this._serverUrl}${this._cohort}/users/me/avatar`;
+    return `${this._serverUrl}/users/me/avatar`;
   }
 
   _handlerPromise(res) {
