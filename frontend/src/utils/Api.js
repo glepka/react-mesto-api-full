@@ -95,7 +95,7 @@ class Api {
   }
 
   putLike(cardId) {
-    return fetch(`${this._getCardsUrl()}//${cardId}/likes`, {
+    return fetch(`${this._getCardsUrl()}/${cardId}/likes`, {
       method: "PUT",
       headers: {
         authorization: this._getToken(),
@@ -104,7 +104,7 @@ class Api {
   }
 
   deleteLike(cardId) {
-    return fetch(`${this._getCardsUrl()}//${cardId}/likes`, {
+    return fetch(`${this._getCardsUrl()}/${cardId}/likes`, {
       method: "DELETE",
       headers: {
         authorization: this._getToken(),
