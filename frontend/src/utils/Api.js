@@ -1,8 +1,7 @@
 import { apiConfig } from "./constants";
 
 class Api {
-  constructor({ token, serverUrl, appJson }) {
-    this._token = token;
+  constructor({ serverUrl, appJson }) {
     this._serverUrl = serverUrl;
     this._appJson = appJson;
   }
@@ -19,15 +18,25 @@ class Api {
     return `${this._serverUrl}/users/me/avatar`;
   }
 
+  _getToken() {
+    return `Bearer ${localStorage.getItem("jwt")}`;
+  }
+
   _handlerPromise(res) {
-    if (res.ok) return res.json();
-    else throw res.status;
+    if (res.ok) {
+      return res.json();
+    }
+    const status = res.status;
+    return res.json().then((err) => {
+      err.status = status;
+      return Promise.reject(err);
+    });
   }
 
   getUserInfo() {
     return fetch(this._getUserInfoUrl(), {
       headers: {
-        authorization: this._token,
+        authorization: this._getToken(),
       },
     }).then(this._handlerPromise);
   }
@@ -36,7 +45,7 @@ class Api {
     return fetch(this._getUserInfoUrl(), {
       method: "PATCH",
       headers: {
-        authorization: this._token,
+        authorization: this._getToken(),
         "Content-Type": this._appJson,
       },
       body: JSON.stringify({
@@ -50,7 +59,7 @@ class Api {
     return fetch(this._getAvatarUrl(), {
       method: "PATCH",
       headers: {
-        authorization: this._token,
+        authorization: this._getToken(),
         "Content-Type": this._appJson,
       },
       body: JSON.stringify({ avatar: url }),
@@ -60,7 +69,7 @@ class Api {
   getInitialCards() {
     return fetch(this._getCardsUrl(), {
       headers: {
-        authorization: this._token,
+        authorization: this._getToken(),
       },
     }).then(this._handlerPromise);
   }
@@ -69,7 +78,7 @@ class Api {
     return fetch(this._getCardsUrl(), {
       method: "POST",
       headers: {
-        authorization: this._token,
+        authorization: this._getToken(),
         "Content-Type": this._appJson,
       },
       body: JSON.stringify({ name, link }),
@@ -80,7 +89,7 @@ class Api {
     return fetch(`${this._getCardsUrl()}/${cardId}`, {
       method: "DELETE",
       headers: {
-        authorization: this._token,
+        authorization: this._getToken(),
       },
     }).then(this._handlerPromise);
   }
@@ -89,7 +98,7 @@ class Api {
     return fetch(`${this._getCardsUrl()}//${cardId}/likes`, {
       method: "PUT",
       headers: {
-        authorization: this._token,
+        authorization: this._getToken(),
       },
     }).then(this._handlerPromise);
   }
@@ -98,7 +107,7 @@ class Api {
     return fetch(`${this._getCardsUrl()}//${cardId}/likes`, {
       method: "DELETE",
       headers: {
-        authorization: this._token,
+        authorization: this._getToken(),
       },
     }).then(this._handlerPromise);
   }

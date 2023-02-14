@@ -11,8 +11,9 @@ export default function Main({
   onCardClick,
   onCardLike,
   onCardDelete,
-  cards,
+  cards = [],
 }) {
+  console.log(cards);
   const user = useContext(CurrentUserContext);
 
   return (

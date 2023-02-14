@@ -10,7 +10,6 @@ export const validationConfig = {
 
 // НАСТРОЙКИ API
 export const apiConfig = {
-  token: "af40a905-9d8d-4025-b8f0-66b0b56f3d46",
   serverUrl: "https://api.front-mesto.glepka.nomoredomainsclub.ru",
   appJson: "application/json",
 };

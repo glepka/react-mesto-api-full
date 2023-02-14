@@ -1,5 +1,5 @@
-const mongoose = require('mongoose');
-const validator = require('validator');
+const mongoose = require("mongoose");
+const validator = require("validator");
 
 const cardSchema = new mongoose.Schema({
   name: {
@@ -12,13 +12,13 @@ const cardSchema = new mongoose.Schema({
     type: String,
     required: true,
     validate: {
-      validator: link => validator.isURL(String(link)),
-      message: 'Неверный формат ссылки',
+      validator: (link) => validator.isURL(String(link)),
+      message: "Неверный формат ссылки",
     },
   },
   owner: {
     type: mongoose.ObjectId,
-    ref: 'user',
+    ref: "user",
     required: true,
   },
   likes: {
@@ -32,4 +32,4 @@ const cardSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model('card', cardSchema);
+module.exports = mongoose.model("card", cardSchema);
