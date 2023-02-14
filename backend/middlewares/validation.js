@@ -1,6 +1,6 @@
-const { celebrate, Joi, Segments } = require("celebrate");
-const { urlPattern } = require("../utils/constants");
-Joi.objectId = require("joi-objectid")(Joi);
+const { celebrate, Joi, Segments } = require('celebrate');
+const { urlPattern } = require('../utils/constants');
+Joi.objectId = require('joi-objectid')(Joi);
 
 module.exports.validateCardId = celebrate({
   [Segments.PARAMS]: Joi.object({
