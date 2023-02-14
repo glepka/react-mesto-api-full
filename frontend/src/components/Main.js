@@ -13,7 +13,6 @@ export default function Main({
   onCardDelete,
   cards = [],
 }) {
-  console.log(cards);
   const user = useContext(CurrentUserContext);
 
   return (
